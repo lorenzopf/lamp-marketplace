@@ -1,4 +1,6 @@
 marketplace/node_modules
+marketplace-api/node_modules
+marketplace-api/.env
 .gitignore
 .DS_Store
 .git

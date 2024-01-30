@@ -5,6 +5,14 @@ import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 // home page
 const Home = lazy(() => import("./pages/home/Home"));
 
+// blog page
+const Blog = lazy(() => import("./pages/blog/Blog"));
+
+// product
+const Product = lazy(() => import("./pages/shop-product/Product"));
+const ShopGridStandard = lazy(() => import("./pages/shop/ShopGridStandard"));
+const ShopGridFilter = lazy(() => import("./pages/shop/ShopGridFilter"));
+
 // other pages
 const About = lazy(() => import("./pages/other/About"));
 const Contact = lazy(() => import("./pages/other/Contact"));
@@ -38,7 +46,26 @@ const App = () => {
                 path={process.env.PUBLIC_URL + "/"}
                 element={<Home/>}
               />
+
               {/* Other pages */}
+              <Route
+                path={process.env.PUBLIC_URL + "/blog"}
+                element={<Blog/>}/>
+
+                {/* Shop product pages */}
+              <Route
+                path={process.env.PUBLIC_URL + "/product/:id"}
+                element={<Product />}
+              />
+              <Route
+                path={process.env.PUBLIC_URL + "/shop-grid-standard"}
+                element={<ShopGridStandard/>}
+              />
+              <Route
+                path={process.env.PUBLIC_URL + "/shop-grid-filter"}
+                element={<ShopGridFilter/>}
+              />
+
               <Route
                 path={process.env.PUBLIC_URL + "/about"}
                 element={<About/>}

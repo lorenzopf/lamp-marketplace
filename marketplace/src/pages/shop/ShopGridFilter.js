@@ -4,7 +4,7 @@ import Paginator from 'react-hooks-paginator';
 import { useLocation } from "react-router-dom"
 import { getSortedProducts } from '../../helpers/product';
 import SEO from "../../components/seo";
-import LayoutOne from '../../layouts/LayoutOne';
+import DefaultLayout from '../../layouts/DefaultLayout';
 import Breadcrumb from '../../wrappers/breadcrumb/Breadcrumb';
 import ShopTopbarFilter from '../../wrappers/product/ShopTopbarFilter';
 import ShopProducts from '../../wrappers/product/ShopProducts';
@@ -53,7 +53,7 @@ const ShopGridFilter = () => {
                 description="Shop page of flone react minimalist eCommerce template."
             />
 
-            <LayoutOne headerTop="visible">
+            <DefaultLayout headerTop="visible">
                 {/* breadcrumb */}
                 <Breadcrumb 
                     pages={[
@@ -90,7 +90,7 @@ const ShopGridFilter = () => {
                         </div>
                     </div>
                 </div>
-            </LayoutOne>
+            </DefaultLayout>
         </Fragment>
     )
 }

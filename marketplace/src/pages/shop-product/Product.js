@@ -2,7 +2,7 @@ import React, { Fragment } from "react";
 import { useSelector } from "react-redux";
 import { useParams, useLocation } from "react-router-dom";
 import SEO from "../../components/seo";
-import LayoutOne from "../../layouts/LayoutOne";
+import DefaultLayout from "../../layouts/DefaultLayout";
 import Breadcrumb from "../../wrappers/breadcrumb/Breadcrumb";
 import RelatedProductSlider from "../../wrappers/product/RelatedProductSlider";
 import ProductDescriptionTab from "../../wrappers/product/ProductDescriptionTab";
@@ -22,7 +22,7 @@ const Product = () => {
         description="Product Page of flone react minimalist eCommerce template."
       />
 
-      <LayoutOne headerTop="visible">
+      <DefaultLayout headerTop="visible">
         {/* breadcrumb */}
         <Breadcrumb 
           pages={[
@@ -49,7 +49,7 @@ const Product = () => {
           spaceBottomClass="pb-95"
           category={product.category[0]}
         />
-      </LayoutOne>
+      </DefaultLayout>
     </Fragment>
   );
 };
